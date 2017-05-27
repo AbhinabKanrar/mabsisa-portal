@@ -8,7 +8,16 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-<link rel="stylesheet" type="text/css" href="app.css"/>
+<style type="text/css">
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+}
+.w3-bar .w3-button {
+    padding: 16px;
+}
+</style>
 <body>
 
 	<div class="w3-top">
@@ -229,6 +238,20 @@
 	</footer>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript">
+var sidebar = document.getElementById("sidebar");
+$(document).ready(function() {
+	$(".app-menu").click(function() {
+		sidebar.style.display = "none";
+	});
+	$(".menu-icon").click(function() {
+		if (sidebar.style.display === 'block') {
+			sidebar.style.display = 'none';
+		} else {
+			sidebar.style.display = 'block';
+		}
+	});
+});
+</script>
 </body>
 </html>
